@@ -3,7 +3,7 @@ const choices = Array.from(document.getElementsByClassName('choice-text'));
 const progressText = document.getElementById('progressText');
 const scoreText = document.getElementById('score');
 const progressBarFull = document.getElementById('progressBarFull');
-const loader = document.getElementById('loader');
+
 const game = document.getElementById('game');
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -48,7 +48,7 @@ fetch(
 
 //CONSTANTS
 const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 3;
+const MAX_QUESTIONS = 20;
 
 startGame = () => {
     questionCounter = 0;
@@ -56,7 +56,7 @@ startGame = () => {
     availableQuesions = [...questions];
     getNewQuestion();
     game.classList.remove('hidden');
-    loader.classList.add('hidden');
+   
 };
 
 getNewQuestion = () => {
